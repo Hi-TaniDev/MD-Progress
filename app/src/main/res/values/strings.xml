@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HiTani</string>
+    <string name="hitani">HiTani</string>
+    <string name="welcome">Welcome</string>
+    <string name="deteksi">Deteksi</string>
+    <string name="desc">Ketahui penyakit tanaman anda hanya dengan ambil gambar daunnya</string>
+    <string name="start">Mulai</string>
+</resources>
