@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.hitani.view.PlantReportActivity"
+        android:label="Laporan Tanaman"
+        tools:layout="@layout/activity_plant_report">
+        <action
+            android:id="@+id/action_FirstFragment_to_PadiFragment"
+            app:destination="@+id/SecondFragment"/>
+        <action
+            android:id="@+id/action_FirstFragment_to_detailPadi"
+            app:destination="@id/detailPadi"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.hitani.padi.ChoosePadiFragment"
+        android:label="Buat Laporan"
+        tools:layout="@layout/fragment_choose_padi">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_rPadi"
+            app:destination="@id/rPadi">
+            <argument
+                android:name="imgPath"
+                app:argType="string"/>
+        </action>
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@+id/FirstFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/rPadi"
+        android:name="com.example.hitani.padi.ResultPadiFragment"
+        android:label="Diagnosa"
+        tools:layout="@layout/fragment_result_padi">
+        <action
+            android:id="@+id/action_rPadi_to_FirstFragment"
+            app:destination="@id/FirstFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailPadi"
+        android:name="com.example.hitani.padi.DetailPadiFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail_padi">
+
+        <action
+            android:id="@+id/action_detailPadi_to_FirstFragment"
+            app:destination="@+id/FirstFragment"/>
+        <argument
+            android:name="nowReport"
+            app:argType="com.example.hitani.data.PlantReport"/>
+    </fragment>
+
+</navigation>
