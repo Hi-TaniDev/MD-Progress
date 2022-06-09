@@ -1,10 +1,12 @@
 package com.example.hitani.view
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
+import com.example.hitani.MainActivity
 import com.example.hitani.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
@@ -17,6 +19,11 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setView()
+
+        binding.startButton.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
     }
 
     private fun setView() {
