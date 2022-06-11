@@ -16,6 +16,16 @@
         <action
             android:id="@+id/action_FirstFragment_to_detailPadi"
             app:destination="@id/detailPadi"/>
+        <action
+            android:id="@+id/action_FirstFragment_to_JagungFragment"
+            app:destination="@+id/ThirdFragment"/>
+        <action
+            android:id="@+id/action_FirstFragment_to_detailJagung"
+            app:destination="@id/detailJagung"/>
+
+        <action
+            android:id="@+id/action_nav_main_to_setting"
+            app:destination="@+id/settingFragment"/>
     </fragment>
 
     <fragment
@@ -38,12 +48,41 @@
     </fragment>
 
     <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.example.hitani.jagung.ChooseJagungFragment"
+        android:label="Buat Laporan"
+        tools:layout="@layout/fragment_choose_jagung">
+
+        <action
+            android:id="@+id/action_ThirdFragment_to_rJagung"
+            app:destination="@id/rJagung">
+            <argument
+                android:name="imgPath"
+                app:argType="string"/>
+        </action>
+
+        <action
+            android:id="@+id/action_ThirdFragment_to_FirstFragment"
+            app:destination="@+id/FirstFragment"/>
+    </fragment>
+
+    <fragment
         android:id="@+id/rPadi"
         android:name="com.example.hitani.padi.ResultPadiFragment"
         android:label="Diagnosa"
         tools:layout="@layout/fragment_result_padi">
         <action
             android:id="@+id/action_rPadi_to_FirstFragment"
+            app:destination="@id/FirstFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/rJagung"
+        android:name="com.example.hitani.jagung.ResultJagungFragment"
+        android:label="Diagnosa"
+        tools:layout="@layout/fragment_result_jagung">
+        <action
+            android:id="@+id/action_rJagung_to_FirstFragment"
             app:destination="@id/FirstFragment"/>
     </fragment>
 
@@ -60,5 +99,25 @@
             android:name="nowReport"
             app:argType="com.example.hitani.data.PlantReport"/>
     </fragment>
+
+    <fragment
+        android:id="@+id/detailJagung"
+        android:name="com.example.hitani.jagung.DetailJagungFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail_jagung">
+
+        <action
+            android:id="@+id/action_detailJagung_to_FirstFragment"
+            app:destination="@+id/FirstFragment"/>
+        <argument
+            android:name="nowReport"
+            app:argType="com.example.hitani.data.PlantReport"/>
+    </fragment>
+
+    <dialog
+        android:id="@+id/settingFragment"
+        android:name="com.example.hitani.view.SettingFragment"
+        android:label="Pengaturan"
+        tools:layout="@layout/fragment_setting"/>
 
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.hitani.padi
+package com.example.hitani.jagung
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -35,24 +35,24 @@ private const val IMAGE_PICK_CODE = 41
 private const val FILE_NAME = "Photo"
 private lateinit var photoFile: File
 lateinit var imgBitmap: Bitmap
-lateinit var rClassifier: RiceClassifier
+lateinit var rClassifier: CornClassifier
 
 @Suppress("DEPRECATION")
-class ChoosePadiFragment : Fragment(){
+class ChooseJagungFragment : Fragment(){
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        rClassifier = RiceClassifier("rice_model.tflite", "padi_label.txt", requireContext())
-        return inflater.inflate(R.layout.fragment_choose_padi, container, false)
+        rClassifier = CornClassifier("corn_model.tflite", "jagung_label.txt", requireContext())
+        return inflater.inflate(R.layout.fragment_choose_jagung, container, false)
     }
 
     @SuppressLint("QueryPermissionsNeeded")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.btnBatal).setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            findNavController().navigate(R.id.action_ThirdFragment_to_FirstFragment)
             showButtons(view)
         }
         view.findViewById<Button>(R.id.btnBack).setOnClickListener {
@@ -61,7 +61,7 @@ class ChoosePadiFragment : Fragment(){
                     val result = rClassifier.recognizeImg(imgBitmap)
                     val bundle = bundleOf("imgPath" to photoFile.toString(), "diagnosa" to result)
 
-                    findNavController().navigate(R.id.action_SecondFragment_to_rPadi, bundle)
+                    findNavController().navigate(R.id.action_ThirdFragment_to_rJagung, bundle)
                     showButtons(view)
                 }
             }else{
@@ -76,7 +76,7 @@ class ChoosePadiFragment : Fragment(){
                     it, "com.example.hitani.fileprovider", photoFile) }
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, fp)
             if (activity?.packageManager?.let {
-                it -> cameraIntent.resolveActivity(it)
+                        it -> cameraIntent.resolveActivity(it)
                 } != null){
                 hideButton(view)
                 startActivityForResult(cameraIntent, PHOTO_REQUEST_CODE)
@@ -105,11 +105,12 @@ class ChoosePadiFragment : Fragment(){
         }
     }
 
+    @Deprecated("Deprecated in Java")
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == PHOTO_REQUEST_CODE && resultCode == Activity.RESULT_OK){
             val takePicture = BitmapFactory.decodeFile(photoFile.absolutePath)
-            val imageView = view?.findViewById<ImageView>(R.id.ivPadi)
+            val imageView = view?.findViewById<ImageView>(R.id.ivJagung)
             val resImage = rotatePicture(takePicture)
             if (resImage != null){
                 imgBitmap = resImage
@@ -126,12 +127,12 @@ class ChoosePadiFragment : Fragment(){
                 photoFile.copyInputStreamToFile(inputStream)
             }
             val takePicture = BitmapFactory.decodeFile(photoFile.absolutePath)
-            val imageView = view?.findViewById<ImageView>(R.id.ivPadi)
-            val resPadi = rotatePicture(takePicture)
-            if (resPadi != null){
-                imgBitmap = resPadi
-            this.view?.let { hideButton(it) }}
-            imageView?.setImageBitmap(resPadi)
+            val imageView = view?.findViewById<ImageView>(R.id.ivJagung)
+            val resJagung = rotatePicture(takePicture)
+            if (resJagung != null){
+                imgBitmap = resJagung
+                this.view?.let { hideButton(it) }}
+            imageView?.setImageBitmap(resJagung)
         }
     }
 
