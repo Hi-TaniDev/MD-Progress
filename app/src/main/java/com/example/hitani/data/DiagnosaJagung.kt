@@ -1,7 +1,7 @@
 package com.example.hitani.data
 
-class DiagnosaPlant {
-    val diagnosisMap: Map<String, String> = mapOf(
+class DiagnosaJagung {
+    val diagnosisMapJagung: Map<String, String> = mapOf(
         "Hawar Daun Bakteri" to "Fungisida tembaga direkomendasikan tetapi perlu diterapkan pada awal siklus penyakit agar efektif. Rotasi tanaman dapat menjadi metode yang efektif untuk menghindari inokulum dari tanaman yang sebelumnya terinfeksi. Untuk mencegah penyebaran penyakit, batasi penanaman pada saat dedaunan kering.",
         "Bintik Coklat" to "Buang sisa-sisa sayuran lama di kebun dan jangan menanam tanaman baru di mana tanaman inang pernah tumbuh. Tidak ada perawatan kimia yang diakui untuk penyakit bercak daun bakteri.",
         "Daun Smut" to "Buang daun yang sakit dan buang. Juga pangkas dan buang semua tongkat yang terinfeksi. Di musim gugur, singkirkan semua daun dan sisa tanaman untuk mencegah bintik hitam dari musim dingin dan kembali di musim semi, ketika pertumbuhan baru dimulai. Bahkan musim dingin yang keras tidak akan membunuh spora yang mungkin terbengkalai di kebun Anda.",

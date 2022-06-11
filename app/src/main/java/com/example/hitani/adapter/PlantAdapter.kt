@@ -13,9 +13,7 @@ import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.exifinterface.media.ExifInterface
 import androidx.navigation.findNavController
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.load.resource.bitmap.TransformationUtils.rotateImage
 import com.example.hitani.R
 import com.example.hitani.data.PlantReport
 import com.example.hitani.view.PlantReportActivityDirections
@@ -79,6 +77,7 @@ class PlantAdapter: RecyclerView.Adapter<PlantAdapter.MyViewHolder>() {
         holder.bindData(nowReport)
         holder.itemView.findViewById<ConstraintLayout>(R.id.rowPlant).setOnClickListener {
             val aksi = PlantReportActivityDirections.actionFirstFragmentToDetailPadi(nowReport)
+            val aksi2 = PlantReportActivityDirections.actionFirstFragmentToDetailJagung(nowReport)
             holder.itemView.findNavController().navigate(aksi)
         }
     }

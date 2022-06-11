@@ -28,4 +28,7 @@
     <string name="simpan">Simpan</string>
     <string name="judul">Judul</string>
     <string name="judul_laporan">Judul Laporan</string>
+    <string name="jagung">Jagung</string>
+    <string name="setting">Pengaturan</string>
+    <string name="logout">Keluar</string>
 </resources>

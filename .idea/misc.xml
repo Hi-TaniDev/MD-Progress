@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android/HiTani/app/src/main/res/drawable-v24/button.xml" value="0.1" />
+        <entry key="..\:/android/HiTani/app/src/main/res/drawable-v24/ic_baseline_settings_24.xml" value="0.1" />
+        <entry key="..\:/android/HiTani/app/src/main/res/drawable-v24/ic_basline_logout.xml" value="0.1" />
         <entry key="..\:/android/HiTani/app/src/main/res/drawable/button.xml" value="0.1" />
         <entry key="..\:/android/HiTani/app/src/main/res/drawable/button_cancel.xml" value="0.1" />
         <entry key="..\:/android/HiTani/app/src/main/res/drawable/button_fitur.xml" value="0.1" />
@@ -17,14 +19,19 @@
         <entry key="..\:/android/HiTani/app/src/main/res/layout/activity_plant_report.xml" value="0.176" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/activity_splash_screen.xml" value="0.1099290780141844" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/activity_welcome.xml" value="0.10309017223910841" />
+        <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_choose_jagung.xml" value="0.2421875" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_choose_padi.xml" value="0.176" />
+        <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_detail_jagung.xml" value="0.2421875" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_detail_padi.xml" value="0.1408514492753623" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_inspect_padi.xml" value="0.14175724637681159" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_main.xml" value="0.176" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_plant_report.xml" value="0.1408514492753623" />
+        <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_result_jagung.xml" value="0.2421875" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_result_padi.xml" value="0.176" />
+        <entry key="..\:/android/HiTani/app/src/main/res/layout/fragment_setting.xml" value="0.23333333333333334" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/row_plant.xml" value="0.264" />
         <entry key="..\:/android/HiTani/app/src/main/res/layout/rv_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/android/HiTani/app/src/main/res/menu/option_menu.xml" value="0.24114583333333334" />
         <entry key="..\:/android/HiTani/app/src/main/res/xml/fileprovider.xml" value="0.1408514492753623" />
       </map>
     </option>

@@ -1,25 +1,16 @@
 package com.example.hitani.view
 
-import android.animation.ValueAnimator
-import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.ListAdapter
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hitani.R
 import com.example.hitani.adapter.PlantAdapter
-import com.example.hitani.databinding.ActivityPlantReportBinding
 import com.getbase.floatingactionbutton.FloatingActionButton
 
 class PlantReportActivity : Fragment(){
@@ -44,5 +35,29 @@ class PlantReportActivity : Fragment(){
         view.findViewById<FloatingActionButton>(R.id.padi).setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_PadiFragment)
         }
+        view.findViewById<FloatingActionButton>(R.id.jagung).setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_JagungFragment)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        menu.clear()
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.option_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.setting -> {
+                view?.findNavController()?.navigate(R.id.action_nav_main_to_setting)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 }
