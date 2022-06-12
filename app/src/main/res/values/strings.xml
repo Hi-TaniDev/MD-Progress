@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Capstone</string>
+    <string name="register">Registrasi</string>
+    <string name="email">Email</string>
+    <string name="name">Nama</string>
+    <string name="password">Password</string>
+    <string name="password_confir">Ulangi Password</string>
+    <string name="desc">Apakah anda telah memiliki akun ? Silahkan klik</string>
+    <string name="here">disini</string>
+    <string name="error">Pastikan Password yang dimasukkan sama!</string>
+    <string name="login">MASUK</string>
+    <string name="login_text">Masuk</string>
+</resources>
