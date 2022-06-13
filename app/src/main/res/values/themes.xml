@@ -42,4 +42,11 @@
         <item name="cornerSize">10dp</item>
         <item name="color">@color/white</item>
     </style>
+
+    <style name="AlertDialog" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:textColor">?attr/textColorPrimary</item>
+        <item name="android:textColorPrimary">?attr/textColorPrimary</item>
+        <item name="android:colorAccent">@color/green</item>
+        <item name="android:background">@drawable/rounded_dialog_bg</item>
+    </style>
 </resources>

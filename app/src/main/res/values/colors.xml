@@ -10,5 +10,10 @@
 
     <color name="green_light">#5ADE67</color>
     <color name="green_200">#5EE86C</color>
-    <color name="red">#F30858</color>
+
+    <color name="grey">#D3D3D3</color>
+    <color name="green">#53FE5C</color>
+    <color name="blue">#0000ff</color>
+    <color name="red">#ff0000</color>
+    <color name="green_peterpan">#19a700</color>
 </resources>
